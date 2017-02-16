@@ -50,7 +50,15 @@ class CmRouterLink {
   }
 
   bool get isRouteActive {
-    return this._router.isRouteActive(this._navigationInstruction);
+    bool result = false;
+
+    try {
+      result = this._router.isRouteActive(this._navigationInstruction);
+    } catch(ex) {
+      print('cmRouterLink: $ex');
+    }
+
+    return result;
   }
 
   set routeParams(List<dynamic> changes) {
