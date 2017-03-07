@@ -43,8 +43,7 @@ class CmRouterLink {
       var navigationHref = this._navigationInstruction.toLinkUrl();
       this.visibleHref = this._location.prepareExternalUrl(navigationHref);
     } catch (ex) {
-      print('cmRouterLink(${this
-          ._routeParams}):  $ex ... using $unknownHref href');
+      //print('cmRouterLink(${this._routeParams}):  $ex ... using $unknownHref href');
       this.visibleHref = unknownHref;
     }
   }
@@ -55,7 +54,7 @@ class CmRouterLink {
     try {
       result = this._router.isRouteActive(this._navigationInstruction);
     } catch(ex) {
-      print('cmRouterLink exception: {$ex}');
+      //print('cmRouterLink exception: {$ex}');
     }
 
     return result;
