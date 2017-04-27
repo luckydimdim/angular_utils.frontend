@@ -53,7 +53,7 @@ class CmRouterLink {
 
     try {
       result = this._router.isRouteActive(this._navigationInstruction);
-    } catch(ex) {
+    } catch (ex) {
       //print('cmRouterLink exception: {$ex}');
     }
 
