@@ -1,6 +1,6 @@
 import 'package:angular2/angular2.dart';
 
-@Pipe(name: 'cmFormatCurrency')
+@Pipe('cmFormatCurrency')
 /**
  * Пайпа для преобразования кодов валют
  */

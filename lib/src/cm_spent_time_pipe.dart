@@ -1,6 +1,6 @@
 import 'package:angular2/angular2.dart';
 
-@Pipe(name: 'cmSpentTime')
+@Pipe('cmSpentTime')
 /**
  * Пайпа для округления дробных числовых значений к 1 знаку после запятой
  * и целочисленных - до целого числа

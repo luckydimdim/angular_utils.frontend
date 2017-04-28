@@ -1,7 +1,7 @@
 import 'package:angular2/angular2.dart';
 import 'package:intl/intl.dart';
 
-@Pipe(name: 'cmFormatMoney')
+@Pipe('cmFormatMoney')
 /**
  * Пайпа для преобразования числовых значений к денежному формату
  */

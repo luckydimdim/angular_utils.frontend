@@ -1,6 +1,6 @@
 import 'package:angular2/angular2.dart';
 
-@Pipe(name: 'cmWeekDay')
+@Pipe('cmWeekDay')
 /**
  * Пайпа для преобразования числовых значений к названию дня недели
  */
