@@ -9,6 +9,10 @@ class CmFormatMoneyPipe extends PipeTransform {
   final formatter = new NumberFormat('###,##0.00', 'ru_RU');
 
   String transform(num value){
+
+    if (value == null)
+      value = 0;
+
     return '${formatter.format(value)}';
   }
 
