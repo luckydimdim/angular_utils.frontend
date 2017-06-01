@@ -12,7 +12,6 @@ import 'dart:html';
   final NgModel _ngModel;
 
   CmPositiveNumberDirective(this._ngModel) {
-    print('CmPositiveNumberDirective');
   }
 
   onInputChange(dynamic event) {
