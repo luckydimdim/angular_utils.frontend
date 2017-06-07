@@ -3,8 +3,8 @@ import 'package:angular2/core.dart';
 import 'dart:html';
 
 @Directive(selector: '[ngModel][cmPositive]',
-    providers: [NgModel],
-    host: {'(ngModelChange)': r'onInputChange($event)'})
+    providers: const [NgModel],
+    host: const  {'(ngModelChange)': r'onInputChange($event)'})
 /**
  * Обеспечивает только положительные значения в поле
  */ class CmPositiveNumberDirective {
