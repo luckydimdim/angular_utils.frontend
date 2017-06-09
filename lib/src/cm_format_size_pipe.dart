@@ -11,7 +11,7 @@ class CmFormatSizePipe extends PipeTransform {
   String parseSize(int value) {
     int decimalPlaces = 1;
 
-    var sizeSuffixes = [ 'bytes', 'Kb', 'Mb', 'Gb', 'Tb', 'Pb', 'Eb', 'Zb', 'Yb' ];
+    var sizeSuffixes = [ 'байт', 'Кб', 'Мб', 'Гб', 'Тб', 'Пб', 'Eb', 'Zb', 'Yb' ];
 
     if (value < 0) {
       return "-";
