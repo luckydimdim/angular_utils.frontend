@@ -6,12 +6,11 @@ import 'package:intl/intl.dart';
  * Пайпа для преобразования ролей в удобный вид
  */
 class CmFormatRolePipe extends PipeTransform {
+  String transform(List<String> values) {
+    List<String> result = new List<String>();
+    ;
 
-  String transform(List<String> values){
-
-    List<String> result = new List<String>();;
-
-    for(String value in values) {
+    for (String value in values) {
       value = value.toUpperCase();
       switch (value) {
         case 'CONTRACTOR':
@@ -27,7 +26,5 @@ class CmFormatRolePipe extends PipeTransform {
     }
 
     return result.join(", ");
-
   }
-
 }

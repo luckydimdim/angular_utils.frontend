@@ -2,17 +2,17 @@ import 'package:angular2/angular2.dart';
 import 'package:angular2/core.dart';
 import 'dart:html';
 
-@Directive(selector: '[ngModel][cmPositive]',
+@Directive(
+    selector: '[ngModel][cmPositive]',
     providers: const [NgModel],
-    host: const  {'(ngModelChange)': r'onInputChange($event)'})
+    host: const {'(ngModelChange)': r'onInputChange($event)'})
 /**
  * Обеспечивает только положительные значения в поле
- */ class CmPositiveNumberDirective {
-
+ */
+class CmPositiveNumberDirective {
   final NgModel _ngModel;
 
-  CmPositiveNumberDirective(this._ngModel) {
-  }
+  CmPositiveNumberDirective(this._ngModel) {}
 
   onInputChange(dynamic event) {
     if (event is double) {

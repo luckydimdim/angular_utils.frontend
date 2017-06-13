@@ -10,7 +10,7 @@ class CmWeekDayPipe extends PipeTransform {
   String parseWeekDay(num value) {
     String result = '';
 
-    switch(value) {
+    switch (value) {
       case 1:
         result = 'пн';
         break;

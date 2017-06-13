@@ -13,12 +13,6 @@ class JsConverter {
     var millisecond = callMethod(jsDate, 'get', ['millisecond']);
 
     return new DateTime(
-        year,
-        month + 1,
-        date,
-        hour,
-        minute,
-        second,
-        millisecond);
+        year, month + 1, date, hour, minute, second, millisecond);
   }
 }

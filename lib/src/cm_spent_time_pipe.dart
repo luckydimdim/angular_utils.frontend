@@ -6,13 +6,13 @@ import 'package:angular2/angular2.dart';
  * и целочисленных - до целого числа
  */
 class CmSpentTimePipe extends PipeTransform {
-  String transform(num value, [bool hideZero = false]) => convertSpentTime(value, hideZero);
+  String transform(num value, [bool hideZero = false]) =>
+      convertSpentTime(value, hideZero);
 
   String convertSpentTime(num value, bool hideZero) {
     String result = '';
 
-    if (hideZero && (value == 0 || value == 0.0))
-      return '';
+    if (hideZero && (value == 0 || value == 0.0)) return '';
 
     if (value.toString().endsWith('.0'))
       result = value.round().toString();

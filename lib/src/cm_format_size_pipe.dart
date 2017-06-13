@@ -11,7 +11,7 @@ class CmFormatSizePipe extends PipeTransform {
   String parseSize(int value) {
     int decimalPlaces = 1;
 
-    var sizeSuffixes = [ 'байт', 'Кб', 'Мб', 'Гб', 'Тб', 'Пб', 'Eb', 'Zb', 'Yb' ];
+    var sizeSuffixes = ['байт', 'Кб', 'Мб', 'Гб', 'Тб', 'Пб', 'Eb', 'Zb', 'Yb'];
 
     if (value < 0) {
       return "-";
@@ -20,15 +20,13 @@ class CmFormatSizePipe extends PipeTransform {
     int i = 0;
     double dValue = value.toDouble();
 
-
-
-    while (dValue.round() >= 1000)
-    {
+    while (dValue.round() >= 1000) {
       dValue /= 1024;
       i++;
     }
 
-    final numberFormat = new NumberFormat('0.0', 'ru_RU');  // FIXME: нехорошо локаль хардкодить
+    final numberFormat =
+        new NumberFormat('0.0', 'ru_RU'); // FIXME: нехорошо локаль хардкодить
     return '${numberFormat.format(dValue)} ${sizeSuffixes[i]}';
   }
 }
