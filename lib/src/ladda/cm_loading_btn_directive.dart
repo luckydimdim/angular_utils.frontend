@@ -24,7 +24,7 @@ class CmLoadingBtnDirective {
     btn = Ladda.create(_el.nativeElement);
   }
 
-  @HostListener('click', [r'$event'])
+  @HostListener('click', const [r'$event'])
   onClick(Event e) async {
     e.preventDefault();
     try {
